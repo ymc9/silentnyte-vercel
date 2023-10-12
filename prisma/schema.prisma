@@ -62,7 +62,7 @@ model User {
     emailVerified DateTime?
     /// @password
     /// @omit
-    password String
+    password String?
     role UserRole @default(USER)
     image String?
     accounts Account[]
