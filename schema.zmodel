@@ -14,6 +14,11 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
+plugin trpc {
+    provider = '@zenstackhq/trpc'
+    output = 'src/server/api/generated'
+}
+
 model Example {
     id Int @id @default(autoincrement())
     name String
